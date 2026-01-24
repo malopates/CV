@@ -229,36 +229,3 @@ window.addEventListener('load', () => {
   startFlow();
   requestAnimationFrame(loop);
 });
-
-// === BOUTON MASQUER / AFFICHER LES POISSONS ===
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("fish-toggle");
-
-  function waitForFishy() {
-    if (window.__fishy) {
-      initToggle();
-    } else {
-      requestAnimationFrame(waitForFishy);
-    }
-  }
-
-  function initToggle() {
-    let hidden = false;
-
-    btn.addEventListener("click", () => {
-      hidden = !hidden;
-
-      if (hidden) {
-        window.__fishy.pause();
-        btn.textContent = "🐟 Afficher poissons";
-        btn.setAttribute("aria-pressed", "true");
-      } else {
-        window.__fishy.resume();
-        btn.textContent = "🐟 Retirer poissons";
-        btn.setAttribute("aria-pressed", "false");
-      }
-    });
-  }
-
-  waitForFishy();
-});
