@@ -157,6 +157,10 @@ h2 {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .item {
   padding: 16px;
