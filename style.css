@@ -65,8 +65,11 @@ body {
 li a {
   color:white;
   font-weight: normal;
+  
 }
 
+
+a {text-decoration: none; }
 header {
   
   display: flex;
@@ -160,17 +163,36 @@ h2 {
 html {
   scroll-behavior: smooth;
 }
-
+.chip, a>.chip{
+  font-size: 20px;
+  scale: 1.4;
+  margin: auto;
+  
+}
+.item > ul{
+  font-size: 20px;
+  
+}
 
 .item {
   padding: 16px;
+  font-size: 20px;
   border-radius: var(--radius);
   background: linear-gradient( rgba(40, 18, 86, 0.7), rgba(0, 0, 0, 0.3));
   border: 1px solid var(--line);
   transition: 0.25s ease;
   margin: 2%;
+  
+  
+}
+a > .chip{
+  scale: 1.4;
+  margin: auto;
 }
 
+div, {
+  font-size: 20px;
+}
 .item:hover {
   background: rgba(0, 0, 0, 0.3);
 
@@ -179,7 +201,7 @@ html {
 
 .item h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 23px;
   color: var(--text-main);
 }
 
@@ -220,6 +242,7 @@ html {
   background: rgba(255,255,255,0.03);
   color: var(--text-muted);
   transition: 0.25s ease;
+  text-decoration: none; 
 }
 
 .chip:hover {
@@ -281,7 +304,7 @@ button {
     margin: 0;
 }
 
-a {
+a, :not() ul {
     color: var(--accent);
     font-weight: bold;
     text-decoration: none; 
