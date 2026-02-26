@@ -314,68 +314,63 @@ a:hover {
     color: var(--accent);  
 }
 
-
-/* Pour les écrans < 768px (téléphone / petite tablette) */
 @media (max-width: 768px) {
-  
   body {
-    padding: 20px;
+    padding: 10px;
+    overflow-x: hidden; /* empêche le scroll horizontal */
   }
 
   .cv {
-    max-width: 100%;
-    margin: 0 10px;
+    max-width: 100%; /* plus de limite 60% */
+    width: 100%;
+    margin: 0 auto;
   }
 
   main {
-    grid-template-columns: 1fr; /* on empile tout */
+    display: flex;
+    flex-direction: column; /* empile le contenu */
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr; /* une seule colonne de projets */
-    gap: 16px;
+    grid-template-columns: 1fr; /* une seule colonne */
   }
 
   header {
-    padding-left: 15px;
-    padding-right: 15px;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
   }
 
   .avatar {
-    flex: 0 0 150px;
-    height: 150px;
-    font-size: 20px;
+    width: 120px;
+    height: 120px;
+    font-size: 18px;
   }
 
   .name {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .role {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .contact {
     font-size: 12px;
-    gap: 8px;
+    gap: 6px;
+    justify-content: center;
   }
 
   .item {
     font-size: 16px;
     padding: 12px;
-    margin: 1%;
+    margin: 0 auto; 
   }
 
   .chip {
-    font-size: 12px;
-    padding: 4px 10px;
-  }
-
-  footer {
-    padding: 16px 20px;
-    font-size: 12px;
+    font-size: 11px;
+    padding: 4px 8px;
   }
 }
