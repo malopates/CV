@@ -314,6 +314,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+
+  .endessousstp{
+    display:none;
+  }
   body {
     padding: 10px;
     overflow-x: hidden; /* empêche le scroll horizontal */
