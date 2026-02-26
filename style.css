@@ -313,3 +313,69 @@ a, :not() ul {
 a:hover {
     color: var(--accent);  
 }
+
+
+/* Pour les écrans < 768px (téléphone / petite tablette) */
+@media (max-width: 768px) {
+  
+  body {
+    padding: 20px;
+  }
+
+  .cv {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr; /* on empile tout */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* une seule colonne de projets */
+    gap: 16px;
+  }
+
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 10px;
+  }
+
+  .avatar {
+    flex: 0 0 150px;
+    height: 150px;
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .contact {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .item {
+    font-size: 16px;
+    padding: 12px;
+    margin: 1%;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  footer {
+    padding: 16px 20px;
+    font-size: 12px;
+  }
+}
